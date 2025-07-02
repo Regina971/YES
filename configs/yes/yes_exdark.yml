@@ -3,7 +3,7 @@ __include__: [
   '../runtime.yml',
   './include/dataloader.yml',
   './include/optimizer_exdark.yml',
-  './include/rtdetr_r50vd.yml',
+  './include/yes_r50vd.yml',
 ]
 
 output_dir: ./impro_exdark/clamp09
