@@ -1,0 +1,9 @@
+__include__: [
+  '../dataset/darkface.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer_darkface.yml',
+  './include/rtdetr_r50vd.yml',
+]
+
+output_dir: ./darkface/final_B_OBE_CAM

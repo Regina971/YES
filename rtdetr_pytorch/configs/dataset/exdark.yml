@@ -1,0 +1,49 @@
+task: detection
+
+num_classes: 12
+remap_mscoco_category: False
+
+train_dataloader: 
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: datasets/ExDark_coco/train
+    ann_file: datasets/ExDark_coco/annotations/train.json
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  batch_size: 8
+  num_workers: 4
+  drop_last: True 
+
+
+val_dataloader:
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: datasets/ExDark_coco/val
+    ann_file: datasets/ExDark_coco/annotations/val.json
+    transforms:
+      type: Compose
+      ops: ~ 
+
+  shuffle: False
+  batch_size: 8
+  num_workers: 4
+  drop_last: False
+
+test_dataloader:
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: datasets/ExDark_coco/test
+    ann_file: datasets/ExDark_coco/annotations/test.json
+    transforms:
+      type: Compose
+      ops: ~ 
+
+  shuffle: False
+  batch_size: 8
+  num_workers: 4
+  drop_last: False
